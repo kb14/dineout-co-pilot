@@ -1,4 +1,4 @@
-# Swiggy Dineout GenAI Co-Pilot
+# Dineout GenAI Co-Pilot
 
 A CLI-first prototype that generates concise, actionable reports for Sales & Account Managers to use before restaurant partner meetings.
 
