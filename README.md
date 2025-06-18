@@ -42,7 +42,7 @@ dineout-co-pilot/
 │ README.md
 │ requirements.txt
 ├─ data/               # Generated CSV data files
-├─ db/                 # SQLite database for SQL Agent (see `analyst.py`)
+├─ db/                 # SQLite database for SQL Agent
 ├─ src/
 │   ├─ loaders.py     # Data loading utilities
 │   ├─ agents/        # Agents of the system
@@ -76,7 +76,7 @@ The system implements a dual-mode data loading approach:
 - Used by most agents for standard metrics
 
 ### SQLite Mode
-- Enables advanced querying capabilities
+- Enables advanced querying capabilities  (see usage in `ads.py` and `discount.py` -> uses AnalystAgent)
 - Better for large-scale data handling
 - Supports the SQL Agent for custom analysis
 
