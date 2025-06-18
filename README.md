@@ -7,7 +7,8 @@ A CLI-first prototype that generates concise, actionable reports for Sales & Acc
 - Generates comprehensive restaurant performance reports
 - Combines metrics, ad performance, peer benchmarks, and AI recommendations
 - CLI interface for quick report generation
-- Markdown output format for easy sharing
+- Markdown output format
+- Model used: gpt-4o
 
 ## Setup
 
@@ -61,10 +62,10 @@ The data was designed maintaining realistic patterns and relationships between d
 
 ### Data Files
 - `restaurant_master.csv`: Restaurant metadata
-- `restaurant_metrics.csv`: Daily performance metrics for last 30 days
-- `ads_data.csv`: Ad campaign data for restaurant
-- `discount_history.csv`: Historical discount configurations for restaurant
-- `peer_benchmarks.csv`: Locality and cuisine-based benchmarks
+- `restaurant_metrics.csv`: Daily performance metrics for last 30 days (1 row per restaurant per day)
+- `ads_data.csv`: Ad campaign data with intervals within last 30 days
+- `discount_history.csv`: Historical discount configurations with intervals within last 30 days
+- `peer_benchmarks.csv`: Monthly average benchmarks by locality and cuisine
 
 
 ## Data Loading System
@@ -76,8 +77,9 @@ The system implements a dual-mode data loading approach:
 - Used by most agents for standard metrics
 
 ### SQLite Mode
-- Enables advanced querying capabilities  (see usage in `ads.py` and `discount.py` -> uses AnalystAgent)
+- Enables advanced querying capabilities
 - Better for large-scale data handling
+- Powers complex calculations in AdsAnalyzerAgent and DiscountAnalyzerAgent where loading entire dataset into memory isn't feasible
 - Supports the SQL Agent for custom analysis
 
 ## System Flow
