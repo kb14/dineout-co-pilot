@@ -1,0 +1,91 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Data Schema and Relationships
+
+## Data Files
+Located in the `data` directory:
+
+### restaurant_master.csv
+Master table of restaurant metadata. 1 row per restaurant.
+Fields:
+- restaurant_id: Unique identifier
+- restaurant_name: Display name
+- city: City location
+- locality: Area/neighborhood
+- cuisine: Cuisine category
+- onboarded_date: Date restaurant joined platform
+
+### restaurant_metrics.csv
+Track restaurant performance over time. 1 row per restaurant per day.
+Fields:
+- restaurant_id: FK to restaurant_master
+- restaurant_name: Display name
+- locality: Area/neighborhood
+- cuisine: Cuisine category
+- date: Observation date
+- bookings: Confirmed reservations
+- cancellations: Cancelled reservations
+- covers: Number of diners served
+- avg_spend_per_cover: Average value per customer
+- revenue: Total revenue
+- avg_rating: Average user rating
+
+### ads_data.csv
+Capture campaign performance metrics. 1 row per campaign per restaurant.
+Fields:
+- restaurant_id: FK to restaurant_master
+- campaign_id: Unique campaign identifier
+- campaign_start: Campaign start date
+- campaign_end: Campaign end date
+- impressions: Ad impressions
+- clicks: Ad clicks
+- conversions: Bookings attributed to ad
+- spend: Ad spend
+- revenue_generated: Revenue from ad-attributed bookings
+
+### discount_history.csv
+Track discount configurations. 1 row per restaurant per config duration.
+Fields:
+- restaurant_id: FK to restaurant_master
+- start_date: Discount config start
+- end_date: Discount config end
+- discount_type: Type of discount
+- discount_percent: Effective discount percentage
+- roi_from_discount: ROI from this config
+
+### peer_benchmarks.csv
+Average benchmarks by locality + cuisine. 1 row per locality + cuisine combination.
+Fields:
+- locality: Area name
+- cuisine: Cuisine category
+- avg_bookings: Average bookings across peers
+- avg_conversion_rate: Average booking rate from clicks
+- avg_ads_spend: Average spend on ads
+- avg_roi: Average ads ROI across peers
+- avg_revenue: Average revenue per restaurant
+- avg_rating: Average user rating across peers
+- avg_discount_percentage: Average discount percentage
+- avg_discount_roi: Average discount ROI
+
+## Key Relationships
+- Restaurant metrics are linked to `restaurant_master.csv` via `restaurant_id`
+- Peer benchmarks are matched using `locality` and `cuisine`
+- Ad and discount data are linked via `restaurant_id`
+
+## Benchmark Analysis
+When comparing against peers:
+1. Match restaurant's locality and cuisine in peer_benchmarks
+2. Compare key metrics:
+   - Bookings vs avg_bookings
+   - Revenue vs avg_revenue
+   - Rating vs avg_rating
+   - Ad ROI vs avg_roi
+   - Discount ROI vs avg_discount_roi
+
+## Analysis Priority
+1. Ad Performance Analysis
+2. Discount Impact Analysis
+3. Operational Improvements

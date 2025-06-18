@@ -1,0 +1,66 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Swiggy Dineout Co-Pilot Project Scope
+
+## Overview
+An AI-powered co-pilot for Sales Executives and Account Managers who work with restaurant partners. The system generates structured, contextual performance summaries to help:
+- Drive adoption of Ads and discounting programmes
+- Improve restaurant performance through data-backed conversations
+- Recommend visibility, pricing, and promotional strategies
+
+## Key Metrics
+| Metric | Description | Usage |
+|--------|-------------|--------|
+| OPD (Orders Per Day) | Count of completed bookings | Shows growth/decline, justifies Ads/discounts |
+| Revenue/GOV | Estimated revenue from bookings | Identifies high-potential partners |
+| Ads ROI | Revenue attributed to Ads ÷ Ad Spend | Validates Ads effectiveness |
+
+## Required Output Components
+1. **Restaurant's Recent Performance**
+   - 30-day metrics: bookings, cancellations, revenue, rating
+   - Notable changes and trends
+
+2. **Ad Campaign Effectiveness**
+   - Metrics: spend, impressions, clicks, conversions, ROI
+   - Efficiency analysis and highlights
+
+3. **Peer Benchmarking**
+   - Compare with similar restaurants (same locality & cuisine)
+   - Identify over/under-performing areas
+
+4. **Recommendations**
+   - Data-driven suggestions (e.g., increase ad spend, adjust discounting)
+   - Based on peer comparison and historical performance
+
+## Evaluation Criteria
+1. **Problem Solving**
+   - Clear structure and approach
+   - Logical flow of analysis
+
+2. **Quality of Insights**
+   - Actionable and useful insights
+   - Appropriate abstraction level
+
+3. **Tech Implementation**
+   - Solution design
+   - Data reasoning
+   - Module reusability
+
+4. **Product Value**
+   - Time-saving for users
+   - Practical utility before customer calls
+
+5. **Data Handling**
+   - Quality of metrics
+   - Realistic analysis
+
+## Success Metrics
+The co-pilot should:
+- Reduce preparation time from 30min-3h to minutes
+- Generate consistent, high-quality insights
+- Scale across hundreds of partners per city
+- Provide actionable, data-backed recommendations
+

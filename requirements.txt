@@ -1,0 +1,16 @@
+langchain==0.3.25
+langchain-openai
+langchain-experimental==0.3.4
+pandas==2.2.3
+python-dotenv==1.0.1
+numpy==1.26.4
+typer==0.9.0
+plotly==5.19.0
+pydantic==2.7.4
+pytest==8.0.2
+mdpdf==0.0.18
+tabulate==0.9.0
+langchain-community==0.3.25
+langgraph==0.4.8
+seaborn==0.13.2
+matplotlib==3.10.3

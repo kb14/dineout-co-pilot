@@ -1,0 +1,12 @@
+locality,cuisine,avg_bookings,avg_conversion_rate,avg_ads_spend,avg_roi,avg_revenue,avg_rating,avg_discount_percentage,avg_discount_roi
+Koramangala,Italian,750,8.5,35000,3.8,2400000,4.2,12,2.8
+Indiranagar,South Indian,1600,12.0,75000,4.2,4000000,4.7,10,3.5
+Whitefield,North Indian,700,7.0,30000,3.5,1500000,4.0,15,3.0
+Indiranagar,Mediterranean,650,9.0,50000,4.0,2000000,4.5,10,3.2
+Whitefield,Bengali,800,6.5,25000,3.2,1200000,3.8,18,2.9
+Jayanagar,South Indian,850,10.0,40000,4.1,1400000,4.5,12,3.3
+HSR Layout,North Indian,650,8.0,45000,3.7,1500000,4.3,15,3.1
+Jayanagar,Mediterranean,400,7.5,20000,3.4,900000,3.9,12,2.7
+HSR Layout,Bengali,550,7.0,22000,3.3,800000,3.9,20,3.0
+Koramangala,North Indian,600,8.2,38000,3.6,1400000,4.2,14,3.2
+Whitefield,Italian,600,7.8,32000,3.5,1800000,4.1,15,2.9
