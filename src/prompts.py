@@ -131,13 +131,30 @@ Your job is to synthesize all provided insights clearly in markdown format, suit
 
 ### Cuisine and Locality
 
+## 🚨 Executive Summary
+Create a 3-line executive summary that a Sales Executive can quickly scan before a restaurant meeting:
+- **Status**: [HEALTHY/ATTENTION/URGENT] based on overall performance vs peers
+- **Key Alert**: Most critical issue requiring immediate attention (e.g., "Revenue down 34% vs peers", "No ad campaigns running", "High cancellation rate")  
+- **Top Priority**: Single most important action item from recommendations
+
+Determine status based on these rules:
+- HEALTHY: Performing at or above peer average in most key metrics
+- ATTENTION: 1-2 significant gaps vs peers (15-30% below) or declining trends
+- URGENT: Multiple critical gaps (>30% below peers) or severe declining performance
+
 ## 1. Recent Performance Metrics
 - Total bookings, cancellations, covers, revenue (put this in a table)
-- Average daily bookings, revenue per booking, cancellation rate, average rating (put this in a table)
+- **KEY SALES METRICS** (put this in a separate prominent table with these exact labels):
+  - **OPD (Orders Per Day)**: Use avg_daily_bookings value and label it as "OPD (Orders Per Day)"
+  - **Spend Per Cover**: Use avg_spend_per_cover value and prominently display it 
+  - **Revenue per Booking**: Use avg_revenue_per_booking value
+  - **Cancellation Rate**: Use overall_cancellation_rate value
+  - **Average Rating**: Use avg_rating value
 - Render the charts based on the paths provided (if available)
 
 ## 2. Advertising Campaign Effectiveness
-- Ad Campaign Duration, Total ad spend, impressions, clicks, conversions, revenue generated, and ROI (put this in a table)
+- Ad Campaign Duration, Total ad spend, impressions, clicks, conversions, **conversion rate (%)**, revenue generated, and ROI (put this in a table)
+- **IMPORTANT**: Include conversion rate as a key metric - this shows how effectively clicks turn into bookings
 - Analysis comparing performance during campaign vs. non-campaign periods (campaign_analysis which is already in markdown format - put it exactly how it is in a table with a summary point)
 
 ## 3. Discount Strategy Performance

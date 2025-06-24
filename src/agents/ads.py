@@ -18,6 +18,7 @@ class AdsOutput(BaseModel):
     total_impressions: int = Field(description="Total ad impressions")
     total_clicks: int = Field(description="Total ad clicks")
     total_conversions: int = Field(description="Total conversions from ads")
+    conversion_rate: float = Field(description="Conversion rate from clicks to bookings (percentage)")
     total_revenue_generated: float = Field(description="Total revenue from ad campaigns")
     roi: float = Field(description="ROI from ad campaigns")
     campaign_analysis: str = Field(description="Campaign analysis of ad performance")
@@ -52,6 +53,7 @@ class AdsAnalyzerAgent:
                 total_impressions=ads_df['impressions'].sum(),
                 total_clicks=ads_df['clicks'].sum(),
                 total_conversions=ads_df['conversions'].sum(),
+                conversion_rate=(ads_df['conversions'].sum() / ads_df['clicks'].sum() * 100) if ads_df['clicks'].sum() > 0 else 0,
                 total_revenue_generated=ads_df['revenue_generated'].sum(),
                 roi=ads_df['revenue_generated'].sum() / ads_df['spend'].sum() if ads_df['spend'].sum() > 0 else 0,
                 campaign_analysis=campaign_analysis,
@@ -73,6 +75,7 @@ class AdsAnalyzerAgent:
             total_impressions=0,
             total_clicks=0,
             total_conversions=0,
+            conversion_rate=0,
             total_revenue_generated=0,
             roi=0,
             campaign_analysis="No campaign data available",

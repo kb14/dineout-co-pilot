@@ -38,7 +38,7 @@ class ReportOrchestrator:
             # Step 2: Generate trends analysis
             logger.info("Step 2: Analyzing trends...")
             trends_agent = TrendsAgent(self.llm)
-            trends_output = trends_agent.analyze(master_df, metrics_df)
+            trends_output = trends_agent.analyze(master_df, metrics_df, ads_df)
 
             # Step 3: Analyze ad performance
             logger.info("Step 3: Analyzing ad performance...")
