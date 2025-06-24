@@ -31,10 +31,27 @@ OPENAI_API_KEY=your_api_key_here
 
 ## Usage
 
+### Generate Reports
 Generate a report for a restaurant:
 ```bash
 python scripts/generate_report.py R001
 ```
+
+### Evaluate Report Quality
+Run structural evaluations on generated reports:
+
+```bash
+# Evaluate all reports in outputs/ directory
+python src/evals/eval_runner.py --batch
+
+# Evaluate specific report with detailed output
+python src/evals/eval_runner.py --report outputs/R002/report.md --detailed
+
+# Save detailed evaluation results to files
+python src/evals/eval_runner.py --batch --save-results
+```
+
+Evaluation results are saved to `outputs/[RESTAURANT_ID]/evals/structural_eval.json`
 
 ## Project Structure
 
@@ -47,12 +64,18 @@ dineout-co-pilot/
 ├─ src/
 │   ├─ loaders.py     # Data loading utilities
 │   ├─ agents/        # Agents of the system
+│   ├─ evals/         # Evaluation framework
+│   │   ├─ evaluators/  # Different evaluation types
+│   │   └─ eval_runner.py  # Main evaluation runner
 │   └─ utils/         # Utility functions
 ├─ scripts/
 │   └─ generate_report.py  # CLI entry point
 ├─ notebooks/         # Development notebooks
 ├─ outputs/          # Generated reports, charts, and artifacts
 |   └─ R*/           # Individual restaurant reports
+|       ├─ report.md   # Generated report
+|       ├─ plots/      # Visualization charts
+|       └─ evals/      # Evaluation results
 ```
 
 ## Data Generation Process

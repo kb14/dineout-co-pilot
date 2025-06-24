@@ -1,0 +1,175 @@
+{
+  "overall_score": 1.0,
+  "total_checks": 25,
+  "passed_checks": 25,
+  "failed_checks": 0,
+  "warnings": 0,
+  "detailed_results": {
+    "sections": {
+      "has_executive_summary": {
+        "status": "PASS",
+        "description": "Section '🚨 Executive Summary' is present",
+        "expected": true,
+        "actual": true
+      },
+      "has_recent_performance_metrics": {
+        "status": "PASS",
+        "description": "Section 'Recent Performance Metrics' is present",
+        "expected": true,
+        "actual": true
+      },
+      "has_advertising_campaign_effectiveness": {
+        "status": "PASS",
+        "description": "Section 'Advertising Campaign Effectiveness' is present",
+        "expected": true,
+        "actual": true
+      },
+      "has_discount_strategy_performance": {
+        "status": "PASS",
+        "description": "Section 'Discount Strategy Performance' is present",
+        "expected": true,
+        "actual": true
+      },
+      "has_peer_benchmarking_summary": {
+        "status": "PASS",
+        "description": "Section 'Peer Benchmarking Summary' is present",
+        "expected": true,
+        "actual": true
+      },
+      "has_recommendations": {
+        "status": "PASS",
+        "description": "Section 'Recommendations' is present",
+        "expected": true,
+        "actual": true
+      },
+      "has_cuisine_and_locality": {
+        "status": "PASS",
+        "description": "Subsection 'Cuisine and Locality' is present",
+        "expected": true,
+        "actual": true
+      },
+      "has_key_sales_metrics": {
+        "status": "PASS",
+        "description": "Subsection 'KEY SALES METRICS' is present",
+        "expected": true,
+        "actual": true
+      }
+    },
+    "executive_summary": {
+      "has_executive_summary_section": {
+        "status": "PASS",
+        "description": "Executive Summary section exists",
+        "expected": true,
+        "actual": true
+      },
+      "has_status": {
+        "status": "PASS",
+        "description": "Executive summary has Status component",
+        "expected": true,
+        "actual": true
+      },
+      "has_key_alert": {
+        "status": "PASS",
+        "description": "Executive summary has Key Alert component",
+        "expected": true,
+        "actual": true
+      },
+      "has_top_priority": {
+        "status": "PASS",
+        "description": "Executive summary has Top Priority component",
+        "expected": true,
+        "actual": true
+      },
+      "has_valid_status_value": {
+        "status": "PASS",
+        "description": "Status is one of ['HEALTHY', 'ATTENTION', 'URGENT']",
+        "expected": true,
+        "actual": true
+      }
+    },
+    "tables": {
+      "has_key_metrics_table": {
+        "status": "PASS",
+        "description": "KEY SALES METRICS table is present",
+        "expected": true,
+        "actual": true
+      },
+      "has_opd_labeling": {
+        "status": "PASS",
+        "description": "OPD (Orders Per Day) is properly labeled",
+        "expected": true,
+        "actual": true
+      },
+      "has_spend_per_cover": {
+        "status": "PASS",
+        "description": "Spend Per Cover metric is present",
+        "expected": true,
+        "actual": true
+      },
+      "has_proper_table_formatting": {
+        "status": "PASS",
+        "description": "Found 3 properly formatted markdown tables",
+        "expected": ">=3",
+        "actual": 3
+      }
+    },
+    "charts": {
+      "has_chart_reference": {
+        "status": "PASS",
+        "description": "Chart reference with proper path is present",
+        "expected": true,
+        "actual": true
+      },
+      "has_bookings_chart": {
+        "status": "PASS",
+        "description": "Bookings rolling 7-day chart is present",
+        "expected": true,
+        "actual": true
+      }
+    },
+    "formatting": {
+      "has_proper_headers": {
+        "status": "PASS",
+        "description": "Found 11 markdown headers",
+        "expected": ">=5",
+        "actual": 11
+      },
+      "has_proper_currency_formatting": {
+        "status": "PASS",
+        "description": "Found 11 properly formatted currency values",
+        "expected": ">=3",
+        "actual": 11
+      },
+      "has_bold_key_metrics": {
+        "status": "PASS",
+        "description": "Found 4 properly bolded key metrics",
+        "expected": ">=3",
+        "actual": 4
+      }
+    },
+    "content_quality": {
+      "appropriate_length": {
+        "status": "PASS",
+        "description": "Report has appropriate length (508 words)",
+        "expected": "200-2000 words",
+        "actual": "508 words"
+      },
+      "no_placeholder_text": {
+        "status": "PASS",
+        "description": "No placeholder text or error indicators found",
+        "expected": false,
+        "actual": false
+      },
+      "has_restaurant_name_in_title": {
+        "status": "PASS",
+        "description": "Restaurant name is present in title",
+        "expected": true,
+        "actual": true
+      }
+    }
+  },
+  "evaluation_type": "structural",
+  "timestamp": "2025-06-24T19:15:00.494386",
+  "restaurant_id": "R002",
+  "report_path": "outputs/R002/report.md"
+}
